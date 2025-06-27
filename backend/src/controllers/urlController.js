@@ -94,7 +94,7 @@ async function generateNewShortUrl(req, res) {
             const maxAttempts = 10;
 
             while (!isUnique && attempts < maxAttempts) {
-                shortId = generateShortId();
+                shortId = await generateShortId();
 
                 if (isSafeShortId(shortId)) {
                     const existing = await URL.findOne({ shortId });

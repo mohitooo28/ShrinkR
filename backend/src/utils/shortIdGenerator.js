@@ -1,12 +1,11 @@
-const { customAlphabet } = require("nanoid");
-
 const alphabet = "abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 
-const generateShortId = (length = 8) => {
+const generateShortId = async (length = 8) => {
     if (length < 4 || length > 12) {
         throw new Error("ID length must be between 4 and 12 characters");
     }
 
+    const { customAlphabet } = await import("nanoid");
     const customNanoid = customAlphabet(alphabet, length);
     return customNanoid();
 };
