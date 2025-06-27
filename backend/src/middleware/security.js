@@ -59,7 +59,16 @@ const validateRequest = (req, res, next) => {
 };
 
 const checkIPWhitelist = (req, res, next) => {
+    // Skip IP check for health endpoint in development
     if (req.path === "/health" && config.nodeEnv !== "production") {
+        return next();
+    }
+
+    // Skip IP checking if no IPs are configured (for Vercel compatibility)
+    if (!config.allowedIPs || config.allowedIPs.length === 0) {
+        console.log(
+            `[IP-SKIP] No IP whitelist configured, relying on CORS protection`
+        );
         return next();
     }
 
