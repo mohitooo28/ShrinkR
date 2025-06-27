@@ -1,0 +1,364 @@
+# ==============================================================================
+# DETAILED .GITIGNORE FOR NODE.JS/EXPRESS APPLICATION
+# ==============================================================================
+
+# ==============================================================================
+# ENVIRONMENT VARIABLES & CONFIGURATION
+# ==============================================================================
+# Environment files containing sensitive data
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+.env.staging
+.env.*.local
+
+# Configuration files with secrets
+config/secrets.js
+config/production.js
+config/staging.js
+*.pem
+*.key
+*.crt
+*.cert
+
+# ==============================================================================
+# DEPENDENCIES
+# ==============================================================================
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Package manager lock files (keep one, ignore others)
+# Uncomment the ones you want to ignore:
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ==============================================================================
+# LOGS & RUNTIME DATA
+# ==============================================================================
+# Application logs
+logs/
+*.log
+*.log.*
+log/
+*.pid
+*.seed
+*.pid.lock
+
+# Winston logs
+combined.log
+error.log
+exceptions.log
+rejections.log
+
+# PM2 logs
+.pm2/
+
+# Runtime data
+pids/
+*.sock
+
+# ==============================================================================
+# TESTING & COVERAGE
+# ==============================================================================
+# Test coverage
+coverage/
+*.lcov
+.nyc_output/
+.coverage/
+
+# Jest
+jest.config.js
+.jest/
+
+# Mocha
+.mocha.opts
+
+# ==============================================================================
+# BUILD OUTPUT & DISTRIBUTION
+# ==============================================================================
+# Build directories
+build/
+dist/
+out/
+.next/
+.nuxt/
+.output/
+
+# Compiled binary addons
+build/Release/
+
+# TypeScript build info
+*.tsbuildinfo
+.tscache/
+
+# Webpack build files
+.webpack/
+
+# ==============================================================================
+# CACHING
+# ==============================================================================
+# Cache directories
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Node.js repl history
+.node_repl_history
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# ==============================================================================
+# DATABASE
+# ==============================================================================
+# SQLite databases
+*.sqlite
+*.sqlite3
+*.db
+*.db3
+
+# Database dumps
+*.sql
+*.dump
+
+# MongoDB dumps
+dump/
+
+# ==============================================================================
+# DEVELOPMENT TOOLS & IDE
+# ==============================================================================
+# VS Code
+.vscode/
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.vim/
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ==============================================================================
+# OPERATING SYSTEM FILES
+# ==============================================================================
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.AppleDouble
+.LSOverride
+Icon
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.tmp
+*.temp
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ==============================================================================
+# PACKAGE MANAGERS
+# ==============================================================================
+# NPM
+.npm
+npm-debug.log*
+.npmignore
+
+# Yarn
+yarn-debug.log*
+yarn-error.log*
+.yarn-integrity
+
+# PNPM
+.pnpm-debug.log*
+
+# ==============================================================================
+# SECURITY & SENSITIVE DATA
+# ==============================================================================
+# API keys and secrets
+.secrets/
+secrets/
+api-keys/
+*.secret
+
+# SSH keys
+id_rsa
+id_rsa.pub
+*.pem
+
+# GPG keys
+*.gpg
+*.asc
+
+# ==============================================================================
+# DOCKER & CONTAINERIZATION
+# ==============================================================================
+# Docker
+.dockerignore
+docker-compose.override.yml
+.docker/
+
+# ==============================================================================
+# CLOUD & DEPLOYMENT
+# ==============================================================================
+# Vercel
+.vercel
+
+# Serverless
+.serverless/
+
+# AWS
+.aws/
+
+# Heroku
+.heroku/
+
+# Netlify
+.netlify/
+
+# ==============================================================================
+# BACKUP & TEMPORARY FILES
+# ==============================================================================
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.rej
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# ==============================================================================
+# MISCELLANEOUS
+# ==============================================================================
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Temporary folders
+tmp/
+temp/
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# ==============================================================================
+# PROJECT SPECIFIC
+# ==============================================================================
+# Add your project-specific ignores here
+# uploads/
+# public/uploads/
+# storage/
