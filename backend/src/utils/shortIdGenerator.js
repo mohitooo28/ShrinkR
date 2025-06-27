@@ -1,13 +1,16 @@
 const alphabet = "abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 
-const generateShortId = async (length = 8) => {
+// Simple random ID generator without external dependencies
+const generateShortId = (length = 8) => {
     if (length < 4 || length > 12) {
         throw new Error("ID length must be between 4 and 12 characters");
     }
 
-    const { customAlphabet } = await import("nanoid");
-    const customNanoid = customAlphabet(alphabet, length);
-    return customNanoid();
+    let result = '';
+    for (let i = 0; i < length; i++) {
+        result += alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+    }
+    return result;
 };
 
 const isSafeShortId = (shortId) => {
