@@ -153,6 +153,10 @@ npm run dev
 | `GET`  | `/{shortId}`               | Redirect to original URL |
 | `GET`  | `/url/analytics/{shortId}` | Get URL analytics        |
 
+## 💻 ShrinkR Usage Walkthrough
+
+https://github.com/user-attachments/assets/afae955c-6152-49ed-bfe5-88a066431cd9
+
 ## 🛠️ Technology Stack
 
 ### Backend Stack
